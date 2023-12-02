@@ -4,9 +4,9 @@
 ## Funcionalidades
 - [x] Control de Vehiculos
 - [x] Control de Autonomia de Vehiculos
-- [x] Control de Consumos de Combustibles
-- [x] Control de Consumos de Aceites
-- [x] Control de Tracking de Vehiculos
+- [] Control de Consumos de Combustibles
+- [] Control de Consumos de Aceites
+- [] Control de Tracking de Vehiculos
 - [x] Control de Usuarios
 - [x] Control de Roles
 - [x] Control de Permisos
@@ -16,8 +16,8 @@
 - [x] Django
 - [x] PostgreSQL
 - [x] Bootstrap
-- [x] APIS de Tracking
-- [x] APIS de Almacen
+- [] APIS de Tracking
+- [] APIS de Almacen
 
 ## Implicados en el desarrollo
 - **Agustin Ceballos** - *Desarrollador*
