@@ -21,21 +21,21 @@
     </style>
 </head>
 <body>
-    <div>
-        <table>
+    <div class="container d-inline-flex p-2">
+        <table class="table table-bordered">
             <thead>
                 <tr>
                     {% for nombre in lista_nombres %}
-                        <th>{{ nombre }}</th>
+                        <th scope="col">{{ nombre }}</th>
                     {% endfor %}
                 </tr>
             </thead>
             <tbody>
-                {% for dato, interno in lista_unidadesp %}
+                {% for dato in tabla %}
                     <tr>
-                        {% for data in interno %}
-                                <td>{{ data }}</td>
-                        {% endfor %}
+                        <td>{{ dato.id }}</td>
+                        <td>{{ dato.unidadproduccion }}</td>
+                        <td>{{ dato.ubicacion }}</td>
                     </tr>
                 {% endfor %}
             </tbody>

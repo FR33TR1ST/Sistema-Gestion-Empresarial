@@ -1,0 +1,56 @@
+<!-- templates/mi_template.html -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Vista</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid #000; /* Borde de 1 píxel sólido en color negro */
+            padding: 8px; /* Espaciado para mejorar la apariencia */
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2; /* Fondo gris para las celdas de encabezado */
+        }
+    </style>
+</head>
+<body>
+    <h1>Vista General Maestros</h1>
+     <div class="container d-inline-flex p-2">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    {% for nombre in lista_nombres %}
+                        <th scope="col">{{ nombre }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for dato in parte %}
+                    <tr>
+                        <td>{{ dato.id }}</td>
+                        <td>{{ dato.interno }}</td>
+                        <td>{{ dato.ubicacion }}</td>
+                        <td>{{ dato.falla }}</td>
+                        <td>{{ dato.porcentajeavance }}</td>
+                        <td>{{ dato.fechareparacionestimada }}</td>
+                        <td>{{ dato.fechaentrada }}</td>
+                        <td>{{ dato.fechasalida }}</td>
+                        <td>{{ dato.estadoreparacion }}</td>
+                        <td>{{ dato.estadoequipo }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

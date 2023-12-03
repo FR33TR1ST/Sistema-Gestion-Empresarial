@@ -6,7 +6,6 @@ class TablaMadre(models.Model):
     fecha_registro = models.DateTimeField(auto_now_add=True)
     internos = models.ForeignKey('Internos', on_delete=models.CASCADE, default=1)
     services = models.ForeignKey('Services', on_delete=models.CASCADE, default=1)
-    novedades = models.ForeignKey('Novedades', on_delete=models.CASCADE, default=1)
     unidadesdeproduccion = models.ForeignKey('UnidadesdeProduccion', on_delete=models.CASCADE, default=1)
     reparaciones = models.ForeignKey('Reparaciones', on_delete=models.CASCADE, default=1)
     logistica = models.ForeignKey('Logistica', on_delete=models.CASCADE, default=1)
@@ -136,8 +135,8 @@ class PartesDiarios(models.Model):
         return ', '.join([str(self.interno), str(self.proveedores), str(self.razonsocial), str(self.cantidadequipos), str(self.kilometrajeinicial), str(self.kilometrajefinal), str(self.turnoreparacion), str(self.horometro), str(self.hsxkmcarga), str(self.tipocombustible), str(self.tipogasoil), str(self.tiponafta), str(self.litrosgasoil), str(self.litrosnafta), str(self.tipoaceite), str(self.litrosaceite), str(self.maquinista), str(self.kmsxhs), str(self.id), str(self.tipodefalla), str(self.reparado)])
 class Novedades(models.Model):
     id = models.AutoField(primary_key=True)
-interno = models.ForeignKey('Internos', on_delete=models.CASCADE, default=1)
-tipofalla = models.CharField(max_length=512)
-reparado = models.BooleanField(default=False)
+    interno = models.ForeignKey('Internos', on_delete=models.CASCADE, default=1)
+    tipofalla = models.CharField(max_length=512)
+    reparado = models.BooleanField(default=False)
 def __str__(self):
         return ', '.join([str(self.interno), str(self.tipofalla), str(self.reparado), str(self.id)])

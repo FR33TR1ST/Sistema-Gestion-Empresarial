@@ -7,7 +7,7 @@
 
 </head>
 <body>
-    <p><a href="{% url 'logistica_crear' %}">Crear logistica</a></p>
+    <p><a class="btn btn-primary" href="{% url 'partes_pd_view' %}" role="button">Partes Diarios PDF</a></p>
     <div class="container d-inline-flex p-2">
         <table class="table table-bordered">
             <thead>
@@ -19,12 +19,30 @@
                 </tr>
             </thead>
             <tbody>
-                {% for dato, interno in lista_logistica %}
+                {% for dato in parte %}
                     <tr>
-                        <td><a href="{% url 'editar_interno' dato%}">Editar</a></td>
-                        {% for data in interno %}
-                                <td>{{ data }}</td>
-                        {% endfor %}
+                        <td><a class="btn btn-primary" href="{% url 'logistica_editar' dato.id%}" role="button">Editar</a></td>
+                        <td>{{ dato.id }}</td>
+                        <td>{{ dato.interno }}</td>
+                        <td>{{ dato.proveedores }}</td>
+                        <td>{{ dato.razonsocial }}</td>
+                        <td>{{ dato.cantidadequipos }}</td>
+                        <td>{{ dato.kilometrajeinicial }}</td>
+                        <td>{{ dato.kilometrajefinal }}</td>
+                        <td>{{ dato.turnoreparacion }}</td>
+                        <td>{{ dato.horometro }}</td>
+                        <td>{{ dato.hsxkmcarga }}</td>
+                        <td>{{ dato.tipocombustible }}</td>
+                        <td>{{ dato.tipogasoil }}</td>
+                        <td>{{ dato.tiponafta }}</td>
+                        <td>{{ dato.litrosgasoil }}</td>
+                        <td>{{ dato.litrosnafta }}</td>
+                        <td>{{ dato.tipoaceite }}</td>
+                        <td>{{ dato.litrosaceite }}</td>
+                        <td>{{ dato.maquinista }}</td>
+                        <td>{{ dato.kmsxhs }}</td>
+                        <td>{{ dato.tipodefalla }}</td>
+                        <td>{{ dato.reparado }}</td>
                     </tr>
                 {% endfor %}
             </tbody>
