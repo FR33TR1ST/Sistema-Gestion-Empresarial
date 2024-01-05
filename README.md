@@ -1,4 +1,4 @@
-# Sistema de Gestion Empresarial
+# Sistema de Gestion Empresarial (En proceso)
 ### Sistema desarrollado por el grupo de desarrollo de la empresa **Pablo Federico Constructora**
 ### En proceso
 ## Funcionalidades
